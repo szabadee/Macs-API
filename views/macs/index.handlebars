@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <tbody>
+    {{#each macs}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{type}}</td>
+      <td>{{inch}}</td>
+      <td>{{year}}</td>
+      <td><a href="/macs/{{id}}" class="btn btn-secondary">Show</a></td>
+      <td><a href="/macs/{{id}}/edit" class="btn btn-success">Edit</a></td>
+      <td>
+        <form method="POST" action="/macs/{{id}}?_method=DELETE">
+        <input class="btn btn-danger" type="submit" value="Delete" />
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/macs/new" class="btn btn-primary">New</a>
